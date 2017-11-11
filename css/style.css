@@ -5,39 +5,69 @@
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
+  border: 1px solid red;
 }
 
 html {
   font-family: "Libre Barcode 39 Text", "Pacifico",sans-serif;
   /*When stylizing with fonts, use fonts families to set a hierarchy of fonts styles, starting with preferred fonts first, then more widely adopted fonts afterwards. Fonts are also inherited from parent to child*/
+  font-size: 24px;
 }
 
 body {
-  padding-top: 50px;
+  padding-top: 55px;
 }
 
 /* NAV STYLING ===================
 ==================================*/
 
 .top-nav {
-  background: #000;
-  height: 50px; /* delete when content is addded */
+  background: rgba(255,255,255,1)
+  /*background: black;*/
+  display: flex;
   position: fixed;
+  align-items: center;
   width: 100%;
   top: 0;
   left: 0;
+
 }
+
+.top-nav ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  margin: auto;
+}
+
+.top-nav li {
+  margin-right: 20px;
+}
+.top-nav .logo {
+  flex: 0;
+  display: flex;
+}
+
+.logo img {
+  height: 50px;
+  display: block;
+}
+
+
+/* ================================ */
 
 .landing {
   background-image: url("../images/circle-sky-landing-medium.jpeg");
   background-size: cover; /*stretches background to cover the immediate container; */
   background-position: center; /* picks the focus of the background displayed */
-  height: calc(100vh - 50px);
+  height: calc(100vh - 55px);
   /* vh = viewport height; vw = viewport width*/
   display: flex;
   align-items: center;
   justify-content: center; /*determines how content inside this container is arraigned vertically, while justify content determines how the content is arraigned horizontically */
-  color: #000;
+  /*color: #000;*/
   /* color is a property inherited from parent to child */
 }
 
@@ -50,6 +80,15 @@ body {
 @media (max-width: 700px) {
   .landing {
     background-image: url("../images/blue-landing-large.jpeg");
+    /*color: #e2e0de;*/
+  }
+
+  .top-nav {
+    background: #000;
+  }
+
+  html {
+    background: #000;
     color: #e2e0de;
   }
 }
